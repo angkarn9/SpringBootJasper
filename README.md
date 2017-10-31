@@ -2,14 +2,19 @@
 SpringBoot Jasper Report
 
 ## Setup Program
-1. Install Font from directory "directprinter\tools\07-TH-Sarabun-PSK.zip"
-2. Start Project with command "mvn spring-boot:run"
-3. You can change port in file "directprinter\src\main\resources\application.properties"
-4. You can modify jasper file from directory "directprinter\src\main\resources\jrxml\slip.jrxml"
+1. Install maven
+2. Install Font from directory "directprinter\tools\07-TH-Sarabun-PSK.zip"
+3. Start Project with command "mvn spring-boot:run"
+4. You can change port in file "directprinter\src\main\resources\application.properties"
+5. You can modify jasper file from directory "directprinter\src\main\resources\jrxml\slip.jrxml"
 
 ## How To Test Programe
-Call API from Rest API tool
-1. http://localhost:9999/printslip/
+1. run program with command "mvn spring-boot:run" in directory "directprinter"
+2. Call API from Rest API tool
+3. url http://localhost:9999/printslip
+4. Method `POST`
+5. Header `Content-Type: application/json`
+
 ### Data Mockup
 `[{
 	"title": "รายการ",
