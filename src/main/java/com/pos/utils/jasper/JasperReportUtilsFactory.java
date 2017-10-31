@@ -3,12 +3,9 @@ package com.pos.utils.jasper;
 import java.io.File;
 import java.util.List;
 import java.util.Map;
-import java.util.ResourceBundle;
 
 import javax.print.PrintService;
 import javax.print.PrintServiceLookup;
-
-import org.apache.log4j.Logger;
 
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
@@ -19,28 +16,8 @@ import net.sf.jasperreports.engine.export.JRPrintServiceExporterParameter;
 import net.sf.jasperreports.engine.util.JRLoader;
 
 public class JasperReportUtilsFactory {
-	private static ResourceBundle resConfig = null;
-	private final static Logger logger = Logger.getLogger(JasperReportUtilsFactory.class);
-	
-//	static {
-//		try {
-//			resConfig = new PropertyResourceBundle(new FileInputStream("C:/images/BPClient/properties/config.properties"));
-//		} 
-//		catch (FileNotFoundException e) {} 
-//		catch (IOException e) {}
-//	}
-//	
 	public static JasperReport getReportByName(File reportFile) throws Exception{
-		JasperReport report = null;
-//		resConfig = new PropertyResourceBundle(new FileInputStream("C:/images/BPClient/properties/config.properties"));
-//		final String jasperUrl = resConfig.getString("pathfile")+"\\BPClient\\jasper\\"+reportName;
-//
-//		if(!GenericValidator.isBlankOrNull(jasperUrl)){
-			report = (JasperReport)JRLoader.loadObject(reportFile);
-//		}else{
-//			logger.error("Error null jasperUrlReport ");
-//		}
-		return report;
+		return (JasperReport)JRLoader.loadObject(reportFile);
 	}
 	
 	public static JRPrintServiceExporter getJRPrintServiceExporter() throws Exception {
