@@ -1,19 +1,12 @@
 package com.pos.directprinter.model;
 
 public class JsonResponse {
-	private String statusCode;
-	private String error;
+	private String desc;
 	
-	public String getStatusCode() {
-		return statusCode;
+	public String getDesc() {
+		return desc;
 	}
-	public void setStatusCode(String statusCode) {
-		this.statusCode = statusCode;
-	}
-	public String getError() {
-		return error;
-	}
-	public void setError(String error) {
-		this.error = error;
+	public void setDesc(String desc) {
+		this.desc = desc;
 	}
 }
